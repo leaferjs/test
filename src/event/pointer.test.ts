@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 
 import { IPointerEvent } from '@leafer/interface'
-import { App, Group, PointerEvent, Rect } from 'leafer-test'
+import { App, Group, PointerButton, PointerEvent, Rect } from 'leafer-test'
 
 
 describe('pointer event', () => {
@@ -129,6 +129,27 @@ describe('pointer event', () => {
 
         expect(dobuleClick).toBeTruthy()
         expect(dobuleTap).toBeTruthy()
+    })
+
+
+    test('pointer.menu_tap', () => {
+        let count = 0
+        leaf.on(PointerEvent.MENU_TAP, () => { count++ })
+
+        const buttons = PointerButton.RIGHT
+        app.interaction.pointerDown(leafHitPoint)
+        app.interaction.pointerUp(leafHitPoint)
+        expect(count).toEqual(0)
+
+        app.interaction.pointerDown({ ...leafHitPoint, buttons })
+        app.interaction.pointerUp({ ...leafHitPoint, buttons })
+        expect(count).toEqual(1)
+
+        app.interaction.pointerDown(leafHitPoint)
+        app.interaction.pointerUp(leafHitPoint)
+        app.interaction.pointerDown({ ...leafHitPoint, buttons })
+        app.interaction.pointerUp({ ...leafHitPoint, buttons })
+        expect(count).toEqual(2)
     })
 
 
