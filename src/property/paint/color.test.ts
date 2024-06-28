@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 
-import { ColorConvert } from 'leafer-ui-node'
+import { ColorConvert } from 'leafer-test'
 
 
 describe('color', () => {

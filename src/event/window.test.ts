@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 
 import { IMoveEvent, IRotateEvent, IZoomEvent } from '@leafer/interface'
-import { App, Group, MoveEvent, Rect, RotateEvent, ZoomEvent } from 'leafer-ui-node'
+import { App, Group, MoveEvent, Rect, RotateEvent, ZoomEvent } from 'leafer-test'
 
 
 describe('window event', () => {

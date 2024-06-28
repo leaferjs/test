@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 
 import { IPointerEvent } from '@leafer/interface'
-import { App, Ellipse, Group, Rect, PointerEvent } from 'leafer-ui-node'
+import { App, Ellipse, Group, Rect, PointerEvent } from 'leafer-test'
 
 
 describe('mask', () => {

@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 
-import { Leafer, LayoutEvent, Rect } from 'leafer-ui-node'
+import { Leafer, LayoutEvent, Rect } from 'leafer-test'
 
 
 describe('Layouter', () => {

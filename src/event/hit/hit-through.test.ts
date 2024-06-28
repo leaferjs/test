@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 
 import { ILeafList, IPointerEvent } from '@leafer/interface'
-import { App, Group, PointerEvent, Rect } from 'leafer-ui-node'
+import { App, Group, PointerEvent, Rect } from 'leafer-test'
 
 
 describe('hit-through', () => {

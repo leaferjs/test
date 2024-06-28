@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 
-import { Group, Rect, Path, Leafer, Platform } from 'leafer-ui-node'
+import { Group, Rect, Path, Leafer, Platform } from 'leafer-test'
 
 
 describe('path-svg', () => {
@@ -64,6 +64,6 @@ describe('path-svg', () => {
         expect(path.worldBoxBounds).toMatchObject({ x: 100, y: -19.436250599696898, width: 157, height: 119.4362505996969 })
         leafer.destroy()
     })
-    
+
 
 })

@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 
-import { App, Rect, Ellipse } from 'leafer-ui-node'
+import { App, Rect, Ellipse } from 'leafer-test'
 
 
 describe('find', () => {

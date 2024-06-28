@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 
-import { App, Group, Rect } from 'leafer-ui-node'
+import { App, Group, Rect } from 'leafer-test'
 
 
 describe('Export', () => {

@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 
 import { ILeaferImage, IObject } from '@leafer/interface'
-import { App, Group, Image, Rect, ImageEvent, RenderEvent } from 'leafer-ui-node'
+import { App, Group, Image, Rect, ImageEvent, RenderEvent } from 'leafer-test'
 
 
 describe('Image', () => {

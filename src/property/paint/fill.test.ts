@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 
-import { App, Group, Rect } from 'leafer-ui-node'
+import { App, Group, Rect } from 'leafer-test'
 
 
 describe('fill', () => {
@@ -44,6 +44,6 @@ describe('fill', () => {
         leaf.fill = 'balck'
         expect(leaf.__.__input.fill).toBe(undefined)
     })
-    
+
 
 })

@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 
-import { App, Group, Rect } from 'leafer-ui-node'
+import { App, Group, Rect } from 'leafer-test'
 
 
 describe('stroke', () => {
@@ -44,6 +44,6 @@ describe('stroke', () => {
         leaf.stroke = 'balck'
         expect(leaf.__.__input.stroke).toBe(undefined)
     })
-    
+
 
 })

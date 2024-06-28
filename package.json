@@ -1,0 +1,27 @@
+{
+  "name": "leafer-test",
+  "version": "1.0.0-rc.28",
+  "author": "Chao (Leafer) Wan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leaferjs/test"
+  },
+  "homepage": "https://github.com/leaferjs/test",
+  "bugs": "https://github.com/leaferjs/test/issues",
+  "keywords": [
+    "leaferui test",
+    "leafer-ui test",
+    "leaferjs",
+    "leafer",
+    "html5",
+    "canvas",
+    "2d",
+    "graphic",
+    "renderer",
+    "engine"
+  ],
+  "dependencies": {
+    "@leafer-ui/node": "1.0.0-rc.28"
+  }
+}

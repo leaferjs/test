@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 
-import { TaskProcessor } from 'leafer-ui-node'
+import { TaskProcessor } from 'leafer-test'
 
 
 describe('Task', () => {
@@ -140,5 +140,5 @@ describe('Task', () => {
         expect(task.remain).toBe(1)
     })
 
-    
+
 })

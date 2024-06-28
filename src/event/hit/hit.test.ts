@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 
 import { ILeaf, IPointerEvent } from '@leafer/interface'
-import { App, Canvas, Group, PointerEvent, Rect } from 'leafer-ui-node'
+import { App, Canvas, Group, PointerEvent, Rect } from 'leafer-test'
 
 
 describe('hit', () => {

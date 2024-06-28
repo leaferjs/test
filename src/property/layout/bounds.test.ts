@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 
 import { IBounds } from '@leafer/interface'
-import { Leafer, Rect, Group, RenderEvent, Ellipse, Line } from 'leafer-ui-node'
+import { Leafer, Rect, Group, RenderEvent, Ellipse, Line } from 'leafer-test'
 
 
 describe('bounds', () => {

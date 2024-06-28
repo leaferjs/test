@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 
 import { IPointerEvent } from '@leafer/interface'
-import { Leafer, Path, PointerEvent } from 'leafer-ui-node'
+import { Leafer, Path, PointerEvent } from 'leafer-test'
 
 
 describe('path', () => {
@@ -58,6 +58,6 @@ describe('path', () => {
         leafer.interaction.pointerDown({ x: 50, y: 50, buttons: 1 } as IPointerEvent)
         expect(hit).toBeFalsy()
     })
-    
+
 
 })

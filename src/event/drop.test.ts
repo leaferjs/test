@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 
 import { IPointerEvent } from '@leafer/interface'
-import { App, DropEvent, DragEvent, Group, Rect } from 'leafer-ui-node'
+import { App, DropEvent, DragEvent, Group, Rect } from 'leafer-test'
 
 
 describe('drop event', () => {

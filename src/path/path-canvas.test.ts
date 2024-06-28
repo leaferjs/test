@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 
-import { Group, Rect, Path, Leafer } from 'leafer-ui-node'
+import { Group, Rect, Path, Leafer } from 'leafer-test'
 
 
 describe('path-canvas', () => {
@@ -34,6 +34,6 @@ describe('path-canvas', () => {
         expect(path.worldBoxBounds).toMatchObject({ x: 0, y: -3.552713678800501e-15, width: 50.00000000000001, height: 30 })
         leafer.destroy()
     })
-    
+
 
 })

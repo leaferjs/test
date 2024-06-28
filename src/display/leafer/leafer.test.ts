@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 
-import { ChildEvent, Leafer, LeaferEvent, MoveEvent, PropertyEvent, Rect } from 'leafer-ui-node'
+import { ChildEvent, Leafer, LeaferEvent, MoveEvent, PropertyEvent, Rect } from 'leafer-test'
 
 
 describe('Leafer', () => {

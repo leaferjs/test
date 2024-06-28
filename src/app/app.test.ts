@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 
 import { IBounds } from '@leafer/interface'
-import { App, ChildEvent, Debug, LeaferEvent, MoveEvent, PropertyEvent, Rect, RenderEvent } from 'leafer-ui-node'
+import { App, ChildEvent, Debug, LeaferEvent, MoveEvent, PropertyEvent, Rect, RenderEvent } from 'leafer-test'
 
 
 describe('App', () => {

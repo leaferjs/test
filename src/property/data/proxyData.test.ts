@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 
-import { App, Rect, UI, defineKey } from 'leafer-ui-node'
+import { App, Rect, UI, defineKey } from 'leafer-test'
 import { IValue, IObject } from '@leafer/interface'
 
 

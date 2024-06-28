@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 
-import { Leafer, Rect, Group, UI, ChildEvent } from 'leafer-ui-node'
+import { Leafer, Rect, Group, UI, ChildEvent } from 'leafer-test'
 
 
 describe('add Leaf', () => {

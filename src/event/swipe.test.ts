@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 
 import { IPointerEvent } from '@leafer/interface'
-import { App, Group, Rect, SwipeEvent } from 'leafer-ui-node'
+import { App, Group, Rect, SwipeEvent } from 'leafer-test'
 
 
 describe('swiper event', () => {

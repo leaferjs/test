@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 
-import { Rect } from 'leafer-ui-node'
+import { Rect } from 'leafer-test'
 
 
 describe('create Leaf', () => {

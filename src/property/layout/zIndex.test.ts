@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 
-import { Leafer, Rect, Group } from 'leafer-ui-node'
+import { Leafer, Rect, Group } from 'leafer-test'
 
 
 describe('zIndex', () => {
