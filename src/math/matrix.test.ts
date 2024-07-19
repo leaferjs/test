@@ -57,26 +57,26 @@ describe('matrix', () => {
 
         // int
         matrix.setLayout({ x: 100, y: 100, scaleX: 1, scaleY: 3, rotation: 0, skewX: 0, skewY: 60 })
-        expect(matrix.getLayout(null, true)).toEqual({ x: 100, y: 100, scaleX: 1, scaleY: 3, rotation: 0, skewX: 0, skewY: 60 })
+        expect(matrix.getLayout(null, null, true)).toEqual({ x: 100, y: 100, scaleX: 1, scaleY: 3, rotation: 0, skewX: 0, skewY: 60 })
 
         // float
         matrix.setLayout({ x: 100, y: 100, scaleX: 1.2, scaleY: 3, rotation: 0, skewX: 0, skewY: -40.5 })
-        expect(matrix.getLayout(null, true)).toEqual({ x: 100, y: 100, scaleX: 1.2, scaleY: 3, rotation: 0, skewX: 0, skewY: -40.5 })
+        expect(matrix.getLayout(null, null, true)).toEqual({ x: 100, y: 100, scaleX: 1.2, scaleY: 3, rotation: 0, skewX: 0, skewY: -40.5 })
 
         matrix.setLayout({ x: 100, y: 100, scaleX: 1.2, scaleY: 3, rotation: 0, skewX: 0, skewY: -140.5 })
-        expect(matrix.getLayout(null, true)).toEqual({ x: 100, y: 100, scaleX: 1.2, scaleY: 3, rotation: 0, skewX: 0, skewY: -140.5 })
+        expect(matrix.getLayout(null, null, true)).toEqual({ x: 100, y: 100, scaleX: 1.2, scaleY: 3, rotation: 0, skewX: 0, skewY: -140.5 })
 
 
         // with rotation
         matrix.setLayout({ x: 100, y: 100, scaleX: 1.2, scaleY: 3, rotation: 45, skewX: 0, skewY: -40.5 })
-        expect(matrix.getLayout(null, true)).toEqual({ x: 100, y: 100, scaleX: 1.2, scaleY: 3, rotation: 45, skewX: 0, skewY: -40.5 })
+        expect(matrix.getLayout(null, null, true)).toEqual({ x: 100, y: 100, scaleX: 1.2, scaleY: 3, rotation: 45, skewX: 0, skewY: -40.5 })
 
         matrix.setLayout({ x: 100, y: 100, scaleX: 1.2, scaleY: 3, rotation: -45, skewX: 0, skewY: 140.5 })
-        expect(matrix.getLayout(null, true)).toEqual({ x: 100, y: 100, scaleX: 1.2, scaleY: 3, rotation: -45, skewX: 0, skewY: 140.5 })
+        expect(matrix.getLayout(null, null, true)).toEqual({ x: 100, y: 100, scaleX: 1.2, scaleY: 3, rotation: -45, skewX: 0, skewY: 140.5 })
 
 
         matrix.setLayout({ x: 100, y: 100, scaleX: 1.2, scaleY: 3, rotation: 45, skewX: 0, skewY: -140.5 })
-        expect(matrix.getLayout(null, true)).toEqual({ x: 100, y: 100, scaleX: 1.2, scaleY: 3, rotation: 45, skewX: 0, skewY: -140.5 })
+        expect(matrix.getLayout(null, null, true)).toEqual({ x: 100, y: 100, scaleX: 1.2, scaleY: 3, rotation: 45, skewX: 0, skewY: -140.5 })
 
 
         // with skewX
