@@ -138,16 +138,20 @@ describe('pointer event', () => {
 
         const buttons = PointerButton.RIGHT
         app.interaction.pointerDown(leafHitPoint)
+        app.interaction.menu(leafHitPoint)
         app.interaction.pointerUp(leafHitPoint)
         expect(count).toEqual(0)
 
         app.interaction.pointerDown({ ...leafHitPoint, buttons })
         app.interaction.pointerUp({ ...leafHitPoint, buttons })
+        app.interaction.menu({ ...leafHitPoint, buttons }) // test Windows 触摸屏双击
         expect(count).toEqual(1)
 
         app.interaction.pointerDown(leafHitPoint)
+        app.interaction.menu(leafHitPoint)
         app.interaction.pointerUp(leafHitPoint)
         app.interaction.pointerDown({ ...leafHitPoint, buttons })
+        app.interaction.menu({ ...leafHitPoint, buttons })
         app.interaction.pointerUp({ ...leafHitPoint, buttons })
         expect(count).toEqual(2)
     })
