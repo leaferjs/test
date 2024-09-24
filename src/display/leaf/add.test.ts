@@ -73,11 +73,11 @@ describe('add Leaf', () => {
         let waitParent = true
         leaf.waitParent(() => { waitParent = false })
 
-        expect(leaf.__parentWait.length).toBe(1)
+        expect(leaf.__bubbleMap[ChildEvent.ADD].length).toBe(1)
 
         group.add(leaf)
 
-        expect(leaf.__parentWait.length).toBe(0)
+        expect(leaf.__bubbleMap[ChildEvent.ADD]).toBeFalsy()
         expect(waitParent).toBe(false)
     })
 
@@ -89,12 +89,12 @@ describe('add Leaf', () => {
         let waitLeafer = true
         leaf.waitLeafer(() => { waitLeafer = false })
 
-        expect(leaf.__leaferWait.length).toBe(1)
+        expect(leaf.__bubbleMap[ChildEvent.MOUNTED].length).toBe(1)
 
         leafer.__setLeafer(leafer)
         leafer.add(leaf)
 
-        expect(leaf.__leaferWait.length).toBe(0)
+        expect(leaf.__bubbleMap[ChildEvent.MOUNTED]).toBeFalsy()
         expect(waitLeafer).toBe(false)
 
         leafer.destroy()
