@@ -33,7 +33,7 @@ describe('App', () => {
 
                 app.destroy()
                 resolve(true)
-            }, 10)
+            }, 30)
         })
     })
 
