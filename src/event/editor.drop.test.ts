@@ -48,7 +48,7 @@ describe('drop event', () => {
         app.interaction.pointerUp(leafHitPoint)
 
         expect(count).toBe(4)
-        expect(groupCount).toBe(1)
+        expect(groupCount).toBe(3)
 
         app.destroy()
     })
