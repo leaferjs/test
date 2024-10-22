@@ -1,9 +1,21 @@
 import { describe, expect, test } from 'vitest'
 
-import { App, Rect, Ellipse } from 'leafer-test'
+import { App, Rect, Group, Ellipse } from 'leafer-test'
 
 
 describe('find', () => {
+
+    test('id without leafer', () => {
+        const rect = new Rect({ id: 'rect', fill: 'black' })
+        const group = new Group({
+            id: 'group',
+            children: [rect]
+        })
+
+        expect(group.findId('group')).toEqual(group)
+        expect(group.findId('rect')).toEqual(rect)
+        expect(group.pick({ x: 50, y: 50 }).target).toEqual(rect)
+    })
 
 
     const app = new App({ type: 'design', width: 100, height: 100 })
