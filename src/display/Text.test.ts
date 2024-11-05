@@ -49,5 +49,17 @@ describe('Text', () => {
         })
     })
 
+    test('autoSizeAlign is false', () => {
+        // no width / height
+        const text = new Text({ text: 'hello, are you ok\nhi\nhahah', textAlign: 'center', verticalAlign: 'middle', autoSizeAlign: false })
+        console.log(text.worldBoxBounds)
+        expect(text.worldBoxBounds).contains({
+            x: 0,
+            y: 0,
+            width: 88.05000305175781,
+            height: 54
+        })
+    })
+
 
 })
