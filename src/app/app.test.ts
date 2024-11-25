@@ -204,6 +204,16 @@ describe('App', () => {
         app.destroy()
     })
 
+    test('width = 0 or height = 0', () => {
+        const app = new App({ type: 'draw', width: 50, height: 500 })
+        const leafer = app.addLeafer()
+        leafer.width = 0
+        leafer.height = 0
+        expect(leafer.width).toBe(1)
+        expect(leafer.height).toBe(1)
+        expect(leafer.pixelRatio).toBe(1)
+        app.destroy()
+    })
 
     test('draw type', () => {
         const app = new App({ type: 'draw', width: 100, height: 100 })
