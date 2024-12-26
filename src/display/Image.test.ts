@@ -170,7 +170,7 @@ describe('Image', () => {
                 loaded++
 
 
-                // change same url
+                // change same url 
                 image.url = 'https://leaferjs.com/image/leafer.jpg'
                 app.forceRender()
 
