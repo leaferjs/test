@@ -10,9 +10,9 @@ describe('hit', () => {
     const app = new App({ type: 'design', width: 100, height: 100 })
     const leafer = app.addLeafer()
     const group = new Group()
-    const leaf = new Rect({ x: 10, y: 10, width: 20, height: 20, fill: 'gray' })
-    const leaf2 = new Rect({ x: 30, y: 30, width: 20, height: 20, fill: 'gray' })
-    const leaf3 = new Rect({ x: 32, y: 32, width: 10, height: 10, fill: 'gray' })
+    const leaf = new Rect({ x: 10, y: 10, width: 20, height: 20, fill: '#333' })
+    const leaf2 = new Rect({ x: 30, y: 30, width: 20, height: 20, fill: '#333' })
+    const leaf3 = new Rect({ x: 32, y: 32, width: 10, height: 10, fill: '#333' })
 
     group.add(leaf)
     group.add(leaf2)
@@ -52,7 +52,7 @@ describe('hit', () => {
 
         down = false
         const leafer2 = app.addLeafer({ hittable: false })
-        leafer2.add(new Rect({ x: 30, y: 30, width: 20, height: 20, fill: 'gray' }))
+        leafer2.add(new Rect({ x: 30, y: 30, width: 20, height: 20, fill: '#333' }))
 
         app.interaction.pointerDown(leaf2HitPoint)
         expect(down).toBeTruthy()
@@ -63,8 +63,8 @@ describe('hit', () => {
 
     test('hitChildren', () => {
         const g = new Group({ hitChildren: false })
-        g.add(new Rect({ x: 10, y: 10, width: 20, height: 20, fill: 'gray' }))
-        g.add(new Rect({ x: 30, y: 30, width: 20, height: 20, fill: 'gray' }))
+        g.add(new Rect({ x: 10, y: 10, width: 20, height: 20, fill: '#333' }))
+        g.add(new Rect({ x: 30, y: 30, width: 20, height: 20, fill: '#333' }))
         leafer.add(g)
 
         let target: ILeaf
@@ -82,8 +82,8 @@ describe('hit', () => {
 
     test('hitSelf', () => {
         const g = new Group({ hitSelf: false })
-        g.add(new Rect({ x: 10, y: 10, width: 20, height: 20, fill: 'gray' }))
-        const rect = new Rect({ x: 30, y: 30, width: 20, height: 20, fill: 'gray' })
+        g.add(new Rect({ x: 10, y: 10, width: 20, height: 20, fill: '#333' }))
+        const rect = new Rect({ x: 30, y: 30, width: 20, height: 20, fill: '#333' })
         g.add(rect)
         leafer.add(g)
 
@@ -106,7 +106,7 @@ describe('hit', () => {
 
     test('destroyed, continue to bubble', () => {
         const g = new Group()
-        const rect = new Rect({ x: 30, y: 30, width: 20, height: 20, fill: 'gray' })
+        const rect = new Rect({ x: 30, y: 30, width: 20, height: 20, fill: '#333' })
         g.add(rect)
         leafer.add(g)
 

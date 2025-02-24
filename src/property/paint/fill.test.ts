@@ -9,7 +9,7 @@ describe('fill', () => {
     const app = new App({ type: 'design', width: 100, height: 100 })
     const leafer = app.addLeafer()
     const group = new Group()
-    const leaf = new Rect({ x: 10, y: 10, width: 20, height: 20, fill: 'gray' })
+    const leaf = new Rect({ x: 10, y: 10, width: 20, height: 20, fill: '#333' })
 
     group.add(leaf)
     leafer.add(group)
@@ -19,7 +19,7 @@ describe('fill', () => {
 
     test('fill', () => {
         expect(leaf.__.__isFills).toBe(undefined)
-        expect(leaf.__.fill).toBe('gray')
+        expect(leaf.__.fill).toBe('#333')
 
         // change
         leaf.fill = {

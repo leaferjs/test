@@ -10,10 +10,10 @@ describe('hit-through', () => {
     const app = new App({ type: 'design', width: 100, height: 100, pointer: { through: true } })
     const leafer = app.addLeafer()
     const group = new Group()
-    const leaf3 = new Rect({ x: 32, y: 32, width: 10, height: 10, fill: 'gray' })
-    const leaf2 = new Rect({ x: 30, y: 30, width: 20, height: 20, fill: 'gray' })
+    const leaf3 = new Rect({ x: 32, y: 32, width: 10, height: 10, fill: '#333' })
+    const leaf2 = new Rect({ x: 30, y: 30, width: 20, height: 20, fill: '#333' })
     const g = new Group()
-    const leaf = new Rect({ x: 10, y: 10, width: 20, height: 20, fill: 'gray' })
+    const leaf = new Rect({ x: 10, y: 10, width: 20, height: 20, fill: '#333' })
 
     group.add(leaf)
     g.add(leaf2)

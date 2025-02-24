@@ -10,7 +10,7 @@ describe('Image', () => {
     const app = new App({ width: 100, height: 100 })
     const leafer = app.addLeafer()
     const group = new Group()
-    const leaf = new Rect({ x: 10, y: 10, width: 20, height: 20, fill: 'gray' })
+    const leaf = new Rect({ x: 10, y: 10, width: 20, height: 20, fill: '#333' })
 
     group.add(leaf)
     leafer.add(group)

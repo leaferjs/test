@@ -10,8 +10,8 @@ describe('mask', () => {
     const app = new App({ type: 'design', width: 100, height: 100 })
     const leafer = app.addLeafer()
     const group = new Group()
-    const mask = new Ellipse({ width: 50, height: 50, mask: true, fill: 'gray' })
-    const leaf = new Rect({ x: 10, y: 10, width: 50, height: 50, fill: 'gray' })
+    const mask = new Ellipse({ width: 50, height: 50, mask: true, fill: '#333' })
+    const leaf = new Rect({ x: 10, y: 10, width: 50, height: 50, fill: '#333' })
 
     group.add(mask)
     group.add(leaf)

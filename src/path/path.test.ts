@@ -39,7 +39,7 @@ describe('path', () => {
 
 
     test('windingRule', () => {
-        const path = new Path({ path: 'N 0 0 100 100 M 80 50 P 50 50 30', windingRule: 'nonzero', fill: 'gray' })
+        const path = new Path({ path: 'N 0 0 100 100 M 80 50 P 50 50 30', windingRule: 'nonzero', fill: '#333' })
         leafer.add(path)
 
         expect(path.path).toEqual('N 0 0 100 100 M 80 50 P 50 50 30')
