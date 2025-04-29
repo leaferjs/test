@@ -242,7 +242,7 @@ describe('App', () => {
 
         expect(leafer.watcher.changed).toBe(false)
 
-        Debug.showHitView = true
+        Debug.showBounds = 'hit'
         app.hittable = true
 
         expect(leafer.watcher.changed).toBe(true)
