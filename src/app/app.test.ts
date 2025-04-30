@@ -270,5 +270,22 @@ describe('App', () => {
         app.destroy()
     })
 
+    test('destroy', async () => {
+        const app = new App({ width: 100, height: 100, tree: {} })
+
+        const leaf = new Rect()
+        app.tree.add(leaf)
+        app.start()
+
+        return new Promise(function (resolve) {
+            setTimeout(() => {
+                app.destroy(true)
+                app.renderer.update()
+                expect(app.destroyed).toBe(true)
+                resolve(true)
+            }, 1000)
+        })
+    })
+
 
 })

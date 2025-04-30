@@ -25,7 +25,7 @@ describe('Canvas', () => {
 
     test('pixelRatio is 0', () => {
         const canvas = new Canvas({ pixelRatio: 0 })
-        expect(canvas.pixelRatio).toBe(1)
+        expect(canvas.canvas.pixelRatio).toBe(1)
         canvas.canvas.resize({ width: 10, height: 10, pixelRatio: 0 })
         expect(canvas.canvas.pixelRatio).toBe(1)
     })
