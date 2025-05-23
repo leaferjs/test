@@ -18,6 +18,7 @@ describe('zIndex', () => {
 
     test('set: wait parent', () => {
         group.add(leaf2)
+        expect(group.__layout.affectChildrenSort).toBe(true)
         expect(group.__layout.childrenSortChanged).toBe(true)
         expect(leafer.watcher.updatedList.length).toBe(2)
 
