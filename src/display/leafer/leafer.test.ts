@@ -113,4 +113,18 @@ describe('Leafer', () => {
     })
 
 
+    test('zoom', () => {
+        const leafer = new Leafer({ type: 'design', width: 100, height: 100 })
+        const rect = new Rect({ x: 100, y: 100 })
+        leafer.add(rect)
+        leafer.scaleOfWorld({ x: 50, y: 10 }, 2)
+        expect(leafer.x).toBe(-50)
+        expect(leafer.y).toBe(-10)
+        leafer.scaleOfWorld({ x: 50, y: 10 }, 2)
+        expect(leafer.x).toBe(-150)
+        expect(leafer.y).toBe(-30)
+        leafer.destroy()
+    })
+
+
 })

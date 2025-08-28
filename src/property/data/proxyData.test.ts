@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 
-import { App, Rect, UI, defineKey } from 'leafer-test'
+import { App, Rect, UI, defineKey, isUndefined } from 'leafer-test'
 import { IValue, IObject } from '@leafer/interface'
 
 
@@ -18,7 +18,7 @@ UI.prototype.setProxyAttr = function (name: string, newValue: IValue): void {
 
 UI.prototype.getProxyAttr = function (name: string): IValue {
     const value = (this.__proxyData as IObject)[name]
-    return value === undefined ? this.__.__get(name) : value
+    return isUndefined(value) ? this.__.__get(name) : value
 }
 
 defineKey(UI.prototype, 'proxyData', {
