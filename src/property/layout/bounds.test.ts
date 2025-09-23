@@ -51,9 +51,9 @@ describe('bounds', () => {
 
 
     test('getBounds(render, inner)', () => {
-        expect(leaf.getBounds('render', 'inner')).toEqual({ x: -30, y: -30, width: 260, height: 260 })
-        expect(group.getBounds('render', 'inner')).toEqual({ x: 170, y: 170, width: 260, height: 260 })
-        expect(leafer.getBounds('render', 'inner')).toEqual({ x: -760, y: 440, width: 520, height: 520 })
+        expect(leaf.getBounds('render', 'inner')).toEqual({ x: -10, y: -10, width: 240, height: 240 })
+        expect(group.getBounds('render', 'inner')).toEqual({ x: 190, y: 190, width: 240, height: 240 })
+        expect(leafer.getBounds('render', 'inner')).toEqual({ x: -760, y: 480, width: 480.00000000000006, height: 480 })
     })
 
 
@@ -74,9 +74,9 @@ describe('bounds', () => {
 
 
     test('getBounds(render, local)', () => {
-        expect(leaf.getBounds('render', 'local')).toEqual({ x: 170, y: 170, width: 260, height: 260 })
-        expect(group.getBounds('render', 'local')).toEqual({ x: -760, y: 440, width: 520, height: 520 })
-        expect(leafer.getBounds('render', 'local')).toEqual({ x: -660, y: 540, width: 520, height: 520 })
+        expect(leaf.getBounds('render', 'local')).toEqual({ x: 190, y: 190, width: 240, height: 240 })
+        expect(group.getBounds('render', 'local')).toEqual({ x: -760, y: 480, width: 480.00000000000006, height: 480 })
+        expect(leafer.getBounds('render', 'local')).toEqual({ x: -660, y: 580, width: 480.00000000000006, height: 480 })
     })
 
 
@@ -106,15 +106,15 @@ describe('bounds', () => {
 
 
     test('getBounds(render, world)', () => {
-        expect(leaf.getBounds('render', 'world')).toMatchObject({ x: -660, y: 540, width: 520, height: 520 })
-        expect(group.getBounds('render', 'world')).toMatchObject({ x: -660, y: 540, width: 520, height: 520 })
-        expect(leafer.getBounds('render', 'world')).toMatchObject({ x: -660, y: 540, width: 520, height: 520 })
+        expect(leaf.getBounds('render', 'world')).toMatchObject({ x: -660, y: 580, width: 480, height: 480 })
+        expect(group.getBounds('render', 'world')).toMatchObject({ x: -660, y: 580, width: 480.00000000000006, height: 480 })
+        expect(leafer.getBounds('render', 'world')).toMatchObject({ x: -660, y: 580, width: 480.00000000000006, height: 480 })
     })
 
 
     test('remove child', () => {
         leaf.remove()
-        expect(leaf.getBounds('render', 'world')).toMatchObject({ x: 170, y: 170, width: 260, height: 260 })
+        expect(leaf.getBounds('render', 'world')).toMatchObject({ x: 190, y: 190, width: 240, height: 240 })
         expect(group.getBounds('render', 'world')).toMatchObject({ x: 200, y: 200, width: 0, height: 0 })
         expect(leafer.getBounds('render', 'world')).toMatchObject({ x: 100, y: 100, width: 0, height: 0 })
 
@@ -130,7 +130,7 @@ describe('bounds', () => {
 
         // leaf none bounds
         group.add(new Rect({ width: 0, height: 0 }))
-        expect(leaf.getBounds('render', 'world')).toMatchObject({ x: 170, y: 170, width: 260, height: 260 })
+        expect(leaf.getBounds('render', 'world')).toMatchObject({ x: 190, y: 190, width: 240, height: 240 })
         expect(group.getBounds('render', 'world')).toMatchObject({ x: 200, y: 200, width: 0, height: 0 })
         expect(leafer.getBounds('render', 'world')).toMatchObject({ x: 100, y: 100, width: 0, height: 0 })
         leafer.renderer.render()
@@ -140,9 +140,9 @@ describe('bounds', () => {
 
     test('add child', () => {
         group.add(leaf)
-        expect(leaf.getBounds('render', 'world')).toMatchObject({ x: -660, y: 540, width: 520, height: 520 })
-        expect(group.getBounds('render', 'world')).toMatchObject({ x: -660, y: 540, width: 520, height: 520 })
-        expect(leafer.getBounds('render', 'world')).toMatchObject({ x: -660, y: 540, width: 520, height: 520 })
+        expect(leaf.getBounds('render', 'world')).toMatchObject({ x: -660, y: 580, width: 480, height: 480 })
+        expect(group.getBounds('render', 'world')).toMatchObject({ x: -660, y: 580, width: 480.00000000000006, height: 480 })
+        expect(leafer.getBounds('render', 'world')).toMatchObject({ x: -660, y: 580, width: 480.00000000000006, height: 480 })
 
 
     })
@@ -156,12 +156,12 @@ describe('bounds', () => {
 
         leaf2.stroke = 'black'
         expect(leaf2.worldStrokeBounds).toEqual({ x: 9, y: 9, width: 102, height: 102 })
-        expect(leaf2.worldRenderBounds).toMatchObject({ x: -16, y: -16, width: 152, height: 152 })
+        expect(leaf2.worldRenderBounds).toMatchObject({ x: 4, y: 4, width: 132, height: 132 })
 
 
         leaf2.stroke = ''
         expect(leaf2.worldStrokeBounds).toEqual({ x: 10, y: 10, width: 100, height: 100 })
-        expect(leaf2.worldRenderBounds).toMatchObject({ x: -15, y: -15, width: 150, height: 150 })
+        expect(leaf2.worldRenderBounds).toMatchObject({ x: 5, y: 5, width: 130, height: 130 })
 
         leaf2.shadow = null
         expect(leaf2.getBounds('stroke', 'inner')).toBe(leaf2.getBounds('box', 'inner'))

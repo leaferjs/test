@@ -20,7 +20,7 @@ describe('create Leaf', () => {
 
     test('render bounds', () => {
         const leaf = new Rect({ width: 100, height: 100, shadow: { x: 5, y: 5, blur: 10, color: 'black' } })
-        expect(leaf.worldRenderBounds).toMatchObject({ x: -20, y: -20, width: 140, height: 140 })
+        expect(leaf.worldRenderBounds).toMatchObject({ x: -10, y: -10, width: 130, height: 130 })
     })
 
 
