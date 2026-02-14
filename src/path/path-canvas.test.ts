@@ -80,7 +80,7 @@ describe('path-canvas', () => {
             points: [0, 0, 100, 100, 200, 0],
             cornerRadius: 100,
         })
-        expect(line.getPathString(true, true, 2)).toEqual('M0 0L50 50C77.61 77.61 122.39 77.61 150 50L200 0')
+        expect(line.getPathString(true, true, 2)).toEqual('M0 0L29.29 29.29C68.34 68.34 131.66 68.34 170.71 29.29L200 0')
         expect(line.boxBounds).toMatchObject({ x: 0, y: 0, width: 200, height: 100 })
 
     })
