@@ -50,7 +50,7 @@ describe('Leafer', () => {
 
 
         leafer.renderer.render()
-        expect(leafer.watcher.changed).toBe(false)
+        expect(!!leafer.watcher.changed).toBe(false)
 
         leafer.on(LeaferEvent.STOP, () => { count++ })
         leafer.on(LeaferEvent.RESTART, () => { count++ })
@@ -60,7 +60,7 @@ describe('Leafer', () => {
 
         leaf.y = 200
         leafer.renderer.render()
-        expect(leafer.watcher.changed).toBe(true)
+        expect(!!leafer.watcher.changed).toBe(true)
         expect(leafer.running).toBe(false)
 
         expect(count).toBe(6)

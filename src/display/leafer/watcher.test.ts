@@ -104,7 +104,7 @@ describe('Watcher', () => {
 
 
     test('listen watch.data', () => {
-        expect(leafer.watcher.changed).toBe(true)
+        expect(!!leafer.watcher.changed).toBe(true)
 
         leafer.on(WatchEvent.DATA, (e: WatchEvent) => {
             expect(e.data.updatedList.length).toBe(1)
@@ -112,7 +112,7 @@ describe('Watcher', () => {
 
         leafer.emit(WatchEvent.REQUEST)
 
-        expect(leafer.watcher.changed).toBe(false)
+        expect(!!leafer.watcher.changed).toBe(false)
         leafer.destroy()
     })
 

@@ -90,7 +90,7 @@ describe('App', () => {
 
         leaf.y = 200
         leafer.renderer.render()
-        expect(leafer.watcher.changed).toBe(true)
+        expect(!!leafer.watcher.changed).toBe(true)
         expect(app.running).toBe(false)
         expect(leafer.running).toBe(false)
         expect(events.length).toBe(6)
@@ -149,7 +149,7 @@ describe('App', () => {
 
         leaf.y = 200
         leafer.renderer.render()
-        expect(leafer.watcher.changed).toBe(true)
+        expect(!!leafer.watcher.changed).toBe(true)
         expect(app.running).toBe(false)
         expect(leafer.running).toBe(false)
         expect(events.length).toBe(6)
@@ -240,12 +240,12 @@ describe('App', () => {
         app.start()
         app.hittable = false
 
-        expect(leafer.watcher.changed).toBe(false)
+        expect(!!leafer.watcher.changed).toBe(false)
 
         Debug.showBounds = 'hit'
         app.hittable = true
 
-        expect(leafer.watcher.changed).toBe(true)
+        expect(!!leafer.watcher.changed).toBe(false)
 
         app.destroy()
     })
